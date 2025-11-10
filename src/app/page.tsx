@@ -69,7 +69,7 @@ export default function Home() {
             chronark
           </h1>
           <p className="text-gray-400 text-lg">
-            I'm building{' '}
+            I&apos;m building{' '}
             <a 
               href="https://unkey.dev" 
               className="text-white hover:underline"
