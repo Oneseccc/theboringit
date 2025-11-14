@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const calSans = localFont({
-  src: "./fonts/CalSans-SemiBold.ttf",
-  variable: "--font-cal-sans",
-  weight: "600",
-});
 
 export const metadata: Metadata = {
   title: "TheBoringIT - Automation & AI Engineer",
@@ -20,7 +13,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${calSans.variable} antialiased`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased">
         {children}
       </body>
     </html>
