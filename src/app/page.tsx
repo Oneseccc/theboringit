@@ -1,8 +1,17 @@
 "use client";
 
 import Particles from "@/components/particles";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Load Cal Sans font
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Particle Background */}
@@ -28,7 +37,7 @@ export default function Home() {
 
         {/* Main Content */}
         <main className="flex flex-col items-center justify-center px-4">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight font-cal">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight" style={{ fontFamily: 'Cal Sans, sans-serif' }}>
             TheBoringIT
           </h1>
           <p className="text-zinc-400 text-lg text-center max-w-2xl">
