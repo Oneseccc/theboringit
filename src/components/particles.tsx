@@ -212,7 +212,15 @@ export default function Particles({
 
   return (
     <div className={className} ref={canvasContainerRef} aria-hidden="true">
-      <canvas ref={canvasRef} />
+      <canvas 
+        ref={canvasRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          pointerEvents: 'none'
+        }}
+      />
     </div>
   );
 }
